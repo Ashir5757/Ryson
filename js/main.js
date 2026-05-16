@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   app.appendChild(nav);
 
   // Mobile nav
-  const mobileNav = el('div', 'nav-mobile', S.nav.map(l => `<a href="${l.href}">${l.label}</a>`).join('') + `<a href="tel:${S.brand.phone.replace(/\s/g,'')}">${icon('phone')} ${S.brand.phone}</a>`);
+  const mobileNav = el('div', 'nav-mobile', S.nav.map(l => `<a href="${l.href}">${l.label}</a>`).join('') + `<a href="tel:${S.brand.phone.replace(/\s/g,'')}" style="display:flex;align-items:center;gap:10px;"><span style="width:20px;height:20px;display:inline-flex;">${icon('phone')}</span> ${S.brand.phone}</a>`);
   app.appendChild(mobileNav);
 
   document.querySelector('.hamburger').addEventListener('click', () => mobileNav.classList.toggle('open'));
